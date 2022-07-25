@@ -1,16 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
+  font-family: "Poppins", sans-serif;
   background-color: #ffffff;
-  font-family: 'Poppins', sans-serif;
 }
 .background {
-  background-color: #f6f9fc;
+  background: #f6f9fc;
   padding: 50px 0;
 }
 .container {
@@ -31,7 +33,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: #000;
+  color: black;
 }
 li {
   list-style: none;
@@ -43,9 +45,10 @@ li {
   text-transform: capitalize;
 }
 .RText {
-  text-align: right;
+  text-align-last: right;
 }
-input, button {
+input,
+button {
   border: none;
   outline: none;
   background-color: none;
@@ -57,32 +60,23 @@ input, button {
   width: 50px;
   height: 50px;
   line-height: 50px;
-  background-color: #f3f5f9;
+  background: #f3f5f9;
   margin-left: 20px;
   text-align: center;
   border-radius: 50%;
 }
 .boxShadow {
-  box-shadow: rgb(43 52 69 /10%) 0 4px 16px;
+  box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
 }
-.discount {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #e94560;
-  padding: 3px 10px;
-  font-size: 12px;
-  border-radius: 50px;
-  color: #fff;
-  margin: 10px;
-}
-/* -------------category-------------- */
+
+/*---------category----------*/
 .contentWidth {
   width: 77%;
 }
 .category {
+  box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
+  background-color: #fff;
   width: 23%;
-  box-shadow: rgb(43 52 69 /10%) 0 14px 16px;
   height: 510px;
   padding: 15px 0;
   border-radius: 5px;
@@ -103,13 +97,13 @@ input, button {
   padding: 0 20px;
 }
 .category .box:hover {
-  background-color: #ffe1ef;
+  background-color: #ffe1e6;
   cursor: pointer;
 }
 
-/* -------------category-------------- */
+/*---------category----------*/
 .btn-primary {
-  background-color: #e94560;
+  background: #e94560;
   padding: 13px 40px;
   font-weight: bold;
   color: #fff;
@@ -125,14 +119,24 @@ input, button {
   color: #e94560;
   margin: 10px;
 }
-/* -------------category-------------- */
-/* -------------product-------------- */
+.discount {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #e94560;
+  padding: 3px 10px;
+  font-size: 12px;
+  border-radius: 50px;
+  color: #fff;
+  margin: 10px;
+}
+/*---------product-----------*/
 .product {
-  background-color: #fff;
+  background: #fff;
   padding: 20px;
   position: relative;
   border-radius: 8px;
-  box-shadow: rgb(3 0 7 /9%) 0 1px 3px;
+  box-shadow: rgb(3 0 71 / 9%) 0px 1px 3px;
   margin: 10px;
 }
 .product h3 {
@@ -149,19 +153,19 @@ input, button {
   justify-content: space-between;
   color: #e94560;
 }
-.product button {
+.price button {
   background: none;
   color: #e94560;
   font-size: 20px;
-  border: 1px solid rgb(3 0 7 /9%);
+  transition: 0.5s;
+  border: 1px solid rgb(3 0 71 / 9%);
   width: 35px;
   height: 35px;
   border-radius: 5px;
-  transition: .5s;
 }
-.product button:hover {
+.price button:hover {
   cursor: pointer;
-  background: #e94560;
+  background-color: #e94560;
   color: #fff;
 }
 .product-like {
@@ -176,7 +180,7 @@ input, button {
   background-color: #0f3460;
   padding: 1px 10px;
   font-size: 12px;
-  color: #fff;
+  color: white;
   border-radius: 50px;
 }
 .product-like i {
@@ -185,11 +189,10 @@ input, button {
 }
 .product:hover .product-like {
   opacity: 1;
-  cursor: pointer;
 }
-/* -------------product-------------- */
-/* -------------control-btn-------------- */
-.control-btn .next, 
+/*---------product-----------*/
+/*----- control btn -------*/
+.control-btn .next,
 .control-btn .prev {
   position: absolute;
   top: 40%;
@@ -198,7 +201,7 @@ input, button {
   line-height: 60px;
   background: #0f3460;
   border-radius: 50%;
-  transition: 0.5s;
+  transform: 0.5s;
   z-index: 5;
 }
 .control-btn .prev {
@@ -207,19 +210,40 @@ input, button {
 .control-btn .next {
   right: -20px;
 }
-.control-btn .next i, 
-.control-btn .prev i {
+.control-btn .prev i,
+.control-btn .next i {
   font-size: 20px;
   transition: 0.5s;
   color: #fff;
 }
-.control-btn .next:hover, 
-.control-btn .prev:hover {
+.control-btn .prev:hover,
+.control-btn .next:hover {
   background: #e94560;
-  color: #fff;
+  color: white;
   cursor: pointer;
 }
-/* -------------control-btn-------------- */
-
-
-
+/*----- control btn -------*/
+/*----- heading -------*/
+.heading .heading-left i {
+  font-size: 30px;
+}
+.heading .heading-left h2 {
+  font-size: 25px;
+  margin: 5px;
+}
+.heading .heading-right i,
+.heading .heading-right {
+  text-align: right;
+  color: grey;
+}
+/*----- heading -------*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 30px;
+}
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
